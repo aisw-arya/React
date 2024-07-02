@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getProductData } from "../../store/product"; 
 import { useNavigate } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 
 const Dashboard = () => {
@@ -22,7 +23,7 @@ const Dashboard = () => {
         <div>LOADING ...</div>
       ) : (
         <>
-        <button onClick={handleClick}>back</button>
+        <Button variant="outlined" color="secondary" onClick={handleClick}>back</Button>
         <div
         style={{
           display: "flex",
@@ -68,3 +69,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+

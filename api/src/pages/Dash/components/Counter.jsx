@@ -1,19 +1,21 @@
 import { useSelector,useDispatch } from "react-redux";
 import { decrement,increment, selectCountValue} from "../../../store/counter";
 
+import Button from '@mui/material/Button';
 export default function Counter(){
     const count = useSelector(selectCountValue)
     const dispatch =useDispatch()
     return(
         <div>
             <div>
-            <button aria-label="Increment" onClick={() =>dispatch(increment())}>
+            <Button variant="outlined" color="success" aria-label="Increment" onClick={() =>dispatch(increment())}>
                 increment
-            </button>
+            </Button>
             <span>{count}</span>
-            <button aria-label="Decrement" onClick={() =>dispatch(decrement())}>
+            <Button variant="outlined" color="error"aria-label="Decrement" onClick={() =>dispatch(decrement())}>
                 decrement
-            </button>
+            </Button>
+        
             </div>
         </div>
 

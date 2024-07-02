@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Button from '@mui/material/Button';
 function Greeting(){
     const navigate=useNavigate();
     const handleClick =() =>{
@@ -12,9 +13,10 @@ function Greeting(){
     <>
     <div id="background">
     <h1>......Welcome......</h1>
-    <button onClick={handleClick}>Product details</button>
+
+    <Button onClick={handleClick} variant="contained">Product Details</Button>
     </div>
-    <button onClick={handleClickConter}>counter</button>
+    <Button variant="outlined" color="error"onClick={handleClickConter}>counter</Button>
     </>
     )
 }
