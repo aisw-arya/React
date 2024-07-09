@@ -13,10 +13,11 @@ const Dashboard = () => {
   const handleClick =() =>{
       navigate('/');
   }
+  console.log(productData)
   useEffect(() => {
     dispatch(getProductData());
   }, [dispatch]);
-
+  
   return (
     <>
       {isLoading === "pending" ? (
